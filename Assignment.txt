@@ -1,0 +1,22 @@
+
+Your team has inherited the code base for a share trading service.
+The previous team did not use TDD so there are currently no tests.
+Your assignment is to provide test coverage for the existing codebase using a combination of integration and unit tests.
+The test methods already exist in the test files, so you need to add the implementation.
+
+There are 4 tests in total (2 unit and 2 integration)
+
+Unit Tests
+
+1) Implement the unit test for the method CalculateTotalValue on the ShareValueCalculator (Calculate_total_share_value)
+
+2) Implement the unit test for the method GetLowestValueShare on the ShareValueCalculator (Lowest_value_share).
+
+Integration Tests
+
+1) Write an integration test for the method GetQuoteForTicker on the TransactionService (Get_quote_persists_to_database)
+Assert that the quote is persisted to the database (fake repository in our case).
+
+2) Write an integration test for the method AcceptQuote on the TransactionService (Accept_quote_should_buy_shares).
+Assert that the BuySharesFromQuote method is called on the ITradingService EXACTLY ONCE.
+You will need to prepopulate the repository with a Quote in the arrange section.
