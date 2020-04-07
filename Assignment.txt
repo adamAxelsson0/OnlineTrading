@@ -18,5 +18,6 @@ Integration Tests
 Assert that the quote is persisted to the database (fake repository in our case).
 
 2) Write an integration test for the method AcceptQuote on the TransactionService (Accept_quote_should_buy_shares).
+
 Assert that the BuySharesFromQuote method is called on the ITradingService EXACTLY ONCE.
 You will need to prepopulate the repository with a Quote in the arrange section.

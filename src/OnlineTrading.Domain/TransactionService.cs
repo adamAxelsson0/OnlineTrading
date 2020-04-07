@@ -19,6 +19,8 @@ namespace OnlineTrading.Domain
         {
             var response = this.shareTradeService.GetQuoteForTicker(ticker);
 
+            if (response.QuoteId == null) throw new InvalidOperationException("Failed to retrieve a quote.");
+            
             repository.AddQuote(new Quote {
                 Id = id,
                 Quantity = quantity,
